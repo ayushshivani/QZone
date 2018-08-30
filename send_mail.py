@@ -9,13 +9,13 @@ def random_number():
     return randint(range_start, range_end)
 
  
-fromaddr = "sarveshmehta21@gmail.com"
-toaddr = "ayushshivani12345@gmail.com"
+fromaddr = "abc@gmail.com"
+toaddr = "xyz@gmail.com"
 number = random_number()
 text = "Your verfication code is " + str(number) 
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
-server.login(fromaddr, "heweltpackard")
+server.login(fromaddr, "password")
 server.sendmail(fromaddr, toaddr, text)
 server.quit()
 
